@@ -1,0 +1,20 @@
+1) Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+
+A: When you run sort on bash.js it sorts the code within the file alphabetically. wc satnd for word count and when you run wc bash.js it shows 3 columns the first is the number of newlines the second column is the number of words in the filesand the 3rd column indicates the number of characters in the column. When we run uniq it sorts the lines of code within the files and only returns the lines that are unique.
+
+2) Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
+
+A: Sort and uniq on commands js first sorts the files alphabetically and then uniq removes any duplicate lines of code that may be within the file before displaying the results into the terminal.
+
+6) Given a string, reverse the order of characters in each word within a sentence while maintaining the original word order and whitespace and return the string. To improve your problem-solving experience, use the suggested functions to solve the problem.
+
+function reverse(str) {
+  const result = [];
+
+  str.split(' ').forEach(word => {
+    const wordReverse = word.split('').reverse().join('')
+    result.push(wordReverse)
+  });
+  return result.join(' ');
+}
+reverse('hello how are you');
