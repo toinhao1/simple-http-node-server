@@ -1,0 +1,41 @@
+1) What is the difference between readdirSync and readdir?
+
+A: readdirSync is a synchronous and block method with readdir is non block and asynchronous.
+
+2) What is the event loop and how does it handle asynchronous requests?
+
+A: The event loop is a system within node that sequentially processes tasks. When the event is asynchronous the operating system will notify Node when the event is ready for processing while it continues to process other events within the queue.
+
+3) Given the following code, specify whether the program is asynchronous and non-blocking or synchronous and blocking or synchronous and non-blocking.
+
+A: Synchronous and blocking.
+
+4) Given the following code, specify whether the program is asynchronous and non-blocking or synchronous and blocking or synchronous and non-blocking.
+
+A: Synchronous and non-blocking.
+
+5) In what order will the console.log statements execute in the code below?
+
+A: C, A, B.
+
+6) setTimeout is a JavaScript function which calls a function after a set amount of milliseconds. Given the following code, explain in what sequence the functions will run and why.
+
+A: The hello function will run before the greeting function as the greeting function has a timer of 100 before the code runs.
+
+7) Create a function which utilizes a callback. Make sure to add console.log statements to understand when your callback function is called.
+
+A:
+function myFunction(val, callback) {
+  if (val == 1) {
+    callback(true);
+  } else {
+    callback(false);
+  }
+}
+myFunction(0, function (bool) {
+  if (bool) {
+    console.log("The value is true");
+  } else {
+    console.log("The value is false");
+  }
+});
